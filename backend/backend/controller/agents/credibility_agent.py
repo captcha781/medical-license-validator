@@ -25,8 +25,8 @@ Inputs:
 {json.dumps(verification, indent=2)}
 
 Scoring guidelines:
-- If verification status is 'valid', start with a base score of 6. If 'invalid', start with 2.
-- Add points yourself for each field match in consistency_report that is true (e.g., name_match, license_number_match, etc).
+- If verification status is 'valid', start with a base score of 6. If 'invalid', start with 20.
+- Add valid by points yourself based on consistency_report (e.g., name_match, license_number_match, etc).
 - Cap score between 0 and 100.
 - Listout the discrepancies in the verification result that led to the score.
 - Provide a summary of the analysi including discrepancies.

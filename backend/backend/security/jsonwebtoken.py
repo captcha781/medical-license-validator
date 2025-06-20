@@ -59,39 +59,28 @@ async def verify_jwt_token(token: str, token_type: str) -> dict:
     try:
         dec_key = JWT_ACCESS_KEY if token_type == "access" else JWT_REFRESH_KEY
 
-        payload = jwt.decode(token, dec_key, algorithms=["HS256"])
-
         non_bearer = token.replace("Bearer ", "")
+
+        payload = jwt.decode(non_bearer, dec_key, algorithms=["HS256"])
 
         id: str = payload.get("_id")
         if not id:
             raise credentials_exception
 
-        user_info = await Token.aggregate(
+        user_info = await Token.find_one(
             {
-                "$match": {
-                    "user_id": PydanticObjectId(id),
-                    "$or": [
-                        {"access_token": non_bearer},
-                        {"refresh_token": non_bearer},
-                    ],
-                }
-            },
-            {
-                "$lookup": {
-                    "from": "users",
-                    "localField": "user_id",
-                    "foreignField": "_id",
-                    "as": "user_info",
-                }
-            },
-            {"$unwind": "$user_info"},
-        ).to_list()
+                "user_id": PydanticObjectId(id),
+                "$or": [
+                    {"access_token": non_bearer},
+                    {"refresh_token": non_bearer},
+                ],
+            }
+        )
 
         if not user_info:
             raise credentials_exception
 
-        return user_info[0].get("user_info")
+        return user_info
 
     except JWTError as e:
         logging.error(e)
@@ -102,4 +91,4 @@ async def verify_jwt_token(token: str, token_type: str) -> dict:
 
 
 async def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]) -> TokenData:
-    return await verify_jwt_token(token)
+    return await verify_jwt_token(token, "access")

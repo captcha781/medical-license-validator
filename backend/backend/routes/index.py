@@ -3,6 +3,7 @@ from typing import Annotated
 
 from backend.controller import main
 from backend.validations import main as main_validator
+from backend.security.jsonwebtoken import get_current_user
 
 router = APIRouter()
 
@@ -21,5 +22,6 @@ async def signin(signin_data: main_validator.SigninValidator):
 async def run_agent(
     credential: UploadFile = File(...),
     resume: UploadFile = File(...),
+    curr_user = Depends(get_current_user)
 ):
     return await main.run_agent(credential, resume)

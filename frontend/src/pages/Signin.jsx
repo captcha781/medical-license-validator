@@ -34,7 +34,7 @@ const Signin = () => {
           email: response.data.user.email,
         })
       );
-      localStorage.setItem("accessToken", response.data.token.access_token);
+      localStorage.setItem("accessToken", response.data.tokens.access_token);
       navigate("/signin");
     }
   };
