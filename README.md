@@ -160,4 +160,4 @@ MIT License
 Repository Link - Link(<https://github.com/captcha781/medical-license-validator.git>)
 
 ## Demo Video
-Demo Vide Link - Link(<https://drive.google.com/file/d/1HUkz4PqcnzLRW8jFpTdTjuL9kiFV67ei/view?usp=sharing>)
+Demo Vide Link - Link(<https://drive.google.com/file/d/1Zkkni8cGJ1y2MsC4D651Vo9jhT0dJT-1/view?usp=sharing>)
