@@ -1,0 +1,902 @@
+[
+  {
+    "name": "Bhosale Prashant Annasaheb",
+    "license_number": "2022/07/6231",
+    "registered_under": "Maharashtra Medical Council",
+    "study": "MBBS",
+    "university": "Maharashtra University of Health Sciences, Nashik",
+    "issued_on": "25/07/2022",
+    "valid_till": "25/07/2027"
+  },
+  {
+    "name": "Tejas Cherian",
+    "license_number": "2002/05/8054",
+    "registered_under": "Karnataka Medical Council",
+    "study": "MD",
+    "university": "Kerala University of Health Sciences",
+    "issued_on": "19/03/2018",
+    "valid_till": "18/03/2023"
+  },
+  {
+    "name": "Miraan Sharma",
+    "license_number": "2015/12/6273",
+    "registered_under": "Delhi Medical Council",
+    "study": "BUMS",
+    "university": "Rajiv Gandhi University of Health Sciences, Karnataka",
+    "issued_on": "10/07/2018",
+    "valid_till": "09/07/2023"
+  },
+  {
+    "name": "Vidur Bhargava",
+    "license_number": "2010/03/3470",
+    "registered_under": "Delhi Medical Council",
+    "study": "MS",
+    "university": "King George's Medical University, Lucknow",
+    "issued_on": "15/03/2021",
+    "valid_till": "14/03/2026"
+  },
+  {
+    "name": "Amani Subramaniam",
+    "license_number": "2022/01/1894",
+    "registered_under": "Kerala Medical Council",
+    "study": "BHMS",
+    "university": "Rajiv Gandhi University of Health Sciences, Karnataka",
+    "issued_on": "10/08/2023",
+    "valid_till": "08/08/2028"
+  },
+  {
+    "name": "Nitara Swamy",
+    "license_number": "2008/09/3691",
+    "registered_under": "Uttar Pradesh Medical Council",
+    "study": "BHMS",
+    "university": "Dr. NTR University of Health Sciences, Andhra Pradesh",
+    "issued_on": "20/12/2023",
+    "valid_till": "18/12/2028"
+  },
+  {
+    "name": "Urvi Mane",
+    "license_number": "2020/07/1696",
+    "registered_under": "West Bengal Medical Council",
+    "study": "BUMS",
+    "university": "Christian Medical College, Vellore",
+    "issued_on": "28/12/2019",
+    "valid_till": "26/12/2024"
+  },
+  {
+    "name": "Tanya Buch",
+    "license_number": "2021/09/1929",
+    "registered_under": "West Bengal Medical Council",
+    "study": "BDS",
+    "university": "King George's Medical University, Lucknow",
+    "issued_on": "28/02/2024",
+    "valid_till": "26/02/2029"
+  },
+  {
+    "name": "Charvi Srinivas",
+    "license_number": "2004/06/3954",
+    "registered_under": "Tamil Nadu Medical Council",
+    "study": "BHMS",
+    "university": "Kerala University of Health Sciences",
+    "issued_on": "21/07/2023",
+    "valid_till": "19/07/2028"
+  },
+  {
+    "name": "Faiyaz Bajwa",
+    "license_number": "2000/12/1240",
+    "registered_under": "Delhi Medical Council",
+    "study": "MBBS",
+    "university": "The West Bengal University of Health Sciences",
+    "issued_on": "29/03/2025",
+    "valid_till": "28/03/2030"
+  },
+  {
+    "name": "Saira Gill",
+    "license_number": "2019/08/5600",
+    "registered_under": "Kerala Medical Council",
+    "study": "MS",
+    "university": "Dr. NTR University of Health Sciences, Andhra Pradesh",
+    "issued_on": "19/07/2024",
+    "valid_till": "18/07/2029"
+  },
+  {
+    "name": "Sana Bhatti",
+    "license_number": "2004/09/3103",
+    "registered_under": "Andhra Pradesh Medical Council",
+    "study": "MS",
+    "university": "All India Institute of Medical Sciences, New Delhi",
+    "issued_on": "02/06/2020",
+    "valid_till": "01/06/2025"
+  },
+  {
+    "name": "Oorja Ranganathan",
+    "license_number": "2017/11/5028",
+    "registered_under": "Andhra Pradesh Medical Council",
+    "study": "BAMS",
+    "university": "Christian Medical College, Vellore",
+    "issued_on": "12/09/2020",
+    "valid_till": "11/09/2025"
+  },
+  {
+    "name": "Krish Kata",
+    "license_number": "1999/08/3495",
+    "registered_under": "Kerala Medical Council",
+    "study": "BAMS",
+    "university": "Kerala University of Health Sciences",
+    "issued_on": "25/02/2021",
+    "valid_till": "24/02/2026"
+  },
+  {
+    "name": "Vardaniya Kapadia",
+    "license_number": "2016/02/9746",
+    "registered_under": "NMC",
+    "study": "BPT",
+    "university": "Rajiv Gandhi University of Health Sciences, Karnataka",
+    "issued_on": "24/10/2024",
+    "valid_till": "23/10/2029"
+  },
+  {
+    "name": "Vidur Singh",
+    "license_number": "2007/09/6185",
+    "registered_under": "MCI",
+    "study": "MD",
+    "university": "King George's Medical University, Lucknow",
+    "issued_on": "24/10/2019",
+    "valid_till": "22/10/2024"
+  },
+  {
+    "name": "Advika Sachdev",
+    "license_number": "1995/05/9121",
+    "registered_under": "MCI",
+    "study": "MBBS",
+    "university": "Christian Medical College, Vellore",
+    "issued_on": "30/03/2022",
+    "valid_till": "29/03/2027"
+  },
+  {
+    "name": "Trisha Mall",
+    "license_number": "2003/09/9379",
+    "registered_under": "Uttar Pradesh Medical Council",
+    "study": "BPT",
+    "university": "Kerala University of Health Sciences",
+    "issued_on": "15/01/2020",
+    "valid_till": "13/01/2025"
+  },
+  {
+    "name": "Miraya Guha",
+    "license_number": "2015/09/9422",
+    "registered_under": "West Bengal Medical Council",
+    "study": "DM",
+    "university": "Dr. NTR University of Health Sciences, Andhra Pradesh",
+    "issued_on": "02/11/2022",
+    "valid_till": "01/11/2027"
+  },
+  {
+    "name": "Tanya Mand",
+    "license_number": "1999/03/4749",
+    "registered_under": "Karnataka Medical Council",
+    "study": "BDS",
+    "university": "King George's Medical University, Lucknow",
+    "issued_on": "12/03/2019",
+    "valid_till": "10/03/2024"
+  },
+  {
+    "name": "Zain Sood",
+    "license_number": "2005/02/3494",
+    "registered_under": "Andhra Pradesh Medical Council",
+    "study": "BDS",
+    "university": "Banaras Hindu University, Varanasi",
+    "issued_on": "27/11/2020",
+    "valid_till": "26/11/2025"
+  },
+  {
+    "name": "Anay Bora",
+    "license_number": "2009/12/8365",
+    "registered_under": "Maharashtra Medical Council",
+    "study": "MCh",
+    "university": "All India Institute of Medical Sciences, New Delhi",
+    "issued_on": "16/08/2020",
+    "valid_till": "15/08/2025"
+  },
+  {
+    "name": "Aayush Trivedi",
+    "license_number": "2009/01/7632",
+    "registered_under": "Uttar Pradesh Medical Council",
+    "study": "MBBS",
+    "university": "King George's Medical University, Lucknow",
+    "issued_on": "07/08/2017",
+    "valid_till": "06/08/2022"
+  },
+  {
+    "name": "Aarna Rajagopalan",
+    "license_number": "1995/03/4841",
+    "registered_under": "West Bengal Medical Council",
+    "study": "BUMS",
+    "university": "Banaras Hindu University, Varanasi",
+    "issued_on": "10/11/2017",
+    "valid_till": "09/11/2022"
+  },
+  {
+    "name": "Adira Kata",
+    "license_number": "2003/05/4022",
+    "registered_under": "Karnataka Medical Council",
+    "study": "BAMS",
+    "university": "Banaras Hindu University, Varanasi",
+    "issued_on": "21/03/2017",
+    "valid_till": "20/03/2022"
+  },
+  {
+    "name": "Anika Gole",
+    "license_number": "2022/03/2467",
+    "registered_under": "NMC",
+    "study": "MS",
+    "university": "Banaras Hindu University, Varanasi",
+    "issued_on": "01/10/2023",
+    "valid_till": "29/09/2028"
+  },
+  {
+    "name": "Riya Badal",
+    "license_number": "2015/01/3785",
+    "registered_under": "West Bengal Medical Council",
+    "study": "MD",
+    "university": "Armed Forces Medical College, Pune",
+    "issued_on": "27/09/2018",
+    "valid_till": "26/09/2023"
+  },
+  {
+    "name": "Himmat Taneja",
+    "license_number": "2008/03/5586",
+    "registered_under": "Maharashtra Medical Council",
+    "study": "BAMS",
+    "university": "King George's Medical University, Lucknow",
+    "issued_on": "22/12/2016",
+    "valid_till": "21/12/2021"
+  },
+  {
+    "name": "Kiara Bhandari",
+    "license_number": "2003/10/2161",
+    "registered_under": "Tamil Nadu Medical Council",
+    "study": "BPT",
+    "university": "King George's Medical University, Lucknow",
+    "issued_on": "08/11/2015",
+    "valid_till": "06/11/2020"
+  },
+  {
+    "name": "Vivaan Saha",
+    "license_number": "2008/05/2026",
+    "registered_under": "MCI",
+    "study": "MCh",
+    "university": "King George's Medical University, Lucknow",
+    "issued_on": "30/07/2017",
+    "valid_till": "29/07/2022"
+  },
+  {
+    "name": "Renee Biswas",
+    "license_number": "2008/10/7092",
+    "registered_under": "MCI",
+    "study": "BAMS",
+    "university": "The West Bengal University of Health Sciences",
+    "issued_on": "22/06/2020",
+    "valid_till": "21/06/2025"
+  },
+  {
+    "name": "Misha Rama",
+    "license_number": "1997/02/7150",
+    "registered_under": "MCI",
+    "study": "BHMS",
+    "university": "Banaras Hindu University, Varanasi",
+    "issued_on": "29/03/2021",
+    "valid_till": "28/03/2026"
+  },
+  {
+    "name": "Madhup Verma",
+    "license_number": "1997/09/9845",
+    "registered_under": "Andhra Pradesh Medical Council",
+    "study": "MBBS",
+    "university": "Armed Forces Medical College, Pune",
+    "issued_on": "13/10/2019",
+    "valid_till": "11/10/2024"
+  },
+  {
+    "name": "Jivin Bains",
+    "license_number": "1997/07/1311",
+    "registered_under": "Karnataka Medical Council",
+    "study": "MCh",
+    "university": "King George's Medical University, Lucknow",
+    "issued_on": "24/12/2017",
+    "valid_till": "23/12/2022"
+  },
+  {
+    "name": "Nitya Venkataraman",
+    "license_number": "2022/03/1241",
+    "registered_under": "Delhi Medical Council",
+    "study": "BAMS",
+    "university": "Christian Medical College, Vellore",
+    "issued_on": "21/10/2021",
+    "valid_till": "20/10/2026"
+  },
+  {
+    "name": "Siya Balan",
+    "license_number": "2004/04/7095",
+    "registered_under": "Tamil Nadu Medical Council",
+    "study": "MBBS",
+    "university": "Christian Medical College, Vellore",
+    "issued_on": "24/04/2020",
+    "valid_till": "23/04/2025"
+  },
+  {
+    "name": "Romil Bahri",
+    "license_number": "2017/07/7647",
+    "registered_under": "NMC",
+    "study": "DM",
+    "university": "Banaras Hindu University, Varanasi",
+    "issued_on": "24/04/2021",
+    "valid_till": "23/04/2026"
+  },
+  {
+    "name": "Tiya Das",
+    "license_number": "2000/06/3308",
+    "registered_under": "Delhi Medical Council",
+    "study": "BHMS",
+    "university": "Christian Medical College, Vellore",
+    "issued_on": "29/07/2017",
+    "valid_till": "28/07/2022"
+  },
+  {
+    "name": "Emir Jha",
+    "license_number": "1996/09/9982",
+    "registered_under": "NMC",
+    "study": "MCh",
+    "university": "All India Institute of Medical Sciences, New Delhi",
+    "issued_on": "20/06/2016",
+    "valid_till": "19/06/2021"
+  },
+  {
+    "name": "Shayak Brar",
+    "license_number": "2021/08/5605",
+    "registered_under": "West Bengal Medical Council",
+    "study": "MCh",
+    "university": "Maharashtra University of Health Sciences, Nashik",
+    "issued_on": "14/09/2021",
+    "valid_till": "13/09/2026"
+  },
+  {
+    "name": "Dharmajan Sha",
+    "license_number": "2022/05/1452",
+    "registered_under": "Delhi Medical Council",
+    "study": "BPT",
+    "university": "The West Bengal University of Health Sciences",
+    "issued_on": "12/03/2022",
+    "valid_till": "11/03/2027"
+  },
+  {
+    "name": "Miraan Varty",
+    "license_number": "2012/04/7003",
+    "registered_under": "Karnataka Medical Council",
+    "study": "BDS",
+    "university": "King George's Medical University, Lucknow",
+    "issued_on": "03/11/2024",
+    "valid_till": "02/11/2029"
+  },
+  {
+    "name": "Yuvraj  Khanna",
+    "license_number": "2015/12/9331",
+    "registered_under": "Delhi Medical Council",
+    "study": "MD",
+    "university": "Banaras Hindu University, Varanasi",
+    "issued_on": "07/09/2021",
+    "valid_till": "06/09/2026"
+  },
+  {
+    "name": "Arnav Borah",
+    "license_number": "2023/12/3145",
+    "registered_under": "Karnataka Medical Council",
+    "study": "MBBS",
+    "university": "Banaras Hindu University, Varanasi",
+    "issued_on": "26/10/2021",
+    "valid_till": "25/10/2026"
+  },
+  {
+    "name": "Nitara Amble",
+    "license_number": "2014/05/1877",
+    "registered_under": "Delhi Medical Council",
+    "study": "MBBS",
+    "university": "King George's Medical University, Lucknow",
+    "issued_on": "26/02/2022",
+    "valid_till": "25/02/2027"
+  },
+  {
+    "name": "Riya Manda",
+    "license_number": "2008/11/8763",
+    "registered_under": "Uttar Pradesh Medical Council",
+    "study": "BHMS",
+    "university": "Rajiv Gandhi University of Health Sciences, Karnataka",
+    "issued_on": "02/03/2016",
+    "valid_till": "01/03/2021"
+  },
+  {
+    "name": "Anahita Shan",
+    "license_number": "2007/08/3982",
+    "registered_under": "Tamil Nadu Medical Council",
+    "study": "MD",
+    "university": "Armed Forces Medical College, Pune",
+    "issued_on": "04/04/2024",
+    "valid_till": "03/04/2029"
+  },
+  {
+    "name": "Badal Date",
+    "license_number": "2006/02/1949",
+    "registered_under": "Uttar Pradesh Medical Council",
+    "study": "BPT",
+    "university": "Maharashtra University of Health Sciences, Nashik",
+    "issued_on": "08/07/2016",
+    "valid_till": "07/07/2021"
+  },
+  {
+    "name": "Yuvraj  Desai",
+    "license_number": "2007/06/3238",
+    "registered_under": "Kerala Medical Council",
+    "study": "BAMS",
+    "university": "Armed Forces Medical College, Pune",
+    "issued_on": "23/10/2024",
+    "valid_till": "22/10/2029"
+  },
+  {
+    "name": "Reyansh Bhat",
+    "license_number": "2009/12/3944",
+    "registered_under": "Delhi Medical Council",
+    "study": "BPT",
+    "university": "Maharashtra University of Health Sciences, Nashik",
+    "issued_on": "13/02/2021",
+    "valid_till": "12/02/2026"
+  },
+  {
+    "name": "Sara Raju",
+    "license_number": "2007/01/5913",
+    "registered_under": "Uttar Pradesh Medical Council",
+    "study": "MS",
+    "university": "King George's Medical University, Lucknow",
+    "issued_on": "06/05/2024",
+    "valid_till": "05/05/2029"
+  },
+  {
+    "name": "Trisha Devan",
+    "license_number": "2007/08/7935",
+    "registered_under": "Uttar Pradesh Medical Council",
+    "study": "MD",
+    "university": "All India Institute of Medical Sciences, New Delhi",
+    "issued_on": "04/03/2019",
+    "valid_till": "02/03/2024"
+  },
+  {
+    "name": "Romil Sarraf",
+    "license_number": "2010/02/3222",
+    "registered_under": "West Bengal Medical Council",
+    "study": "MBBS",
+    "university": "The West Bengal University of Health Sciences",
+    "issued_on": "12/04/2019",
+    "valid_till": "10/04/2024"
+  },
+  {
+    "name": "Farhan Iyer",
+    "license_number": "2005/05/1700",
+    "registered_under": "Andhra Pradesh Medical Council",
+    "study": "BUMS",
+    "university": "Dr. NTR University of Health Sciences, Andhra Pradesh",
+    "issued_on": "24/12/2015",
+    "valid_till": "22/12/2020"
+  },
+  {
+    "name": "Divit Kale",
+    "license_number": "2005/10/2473",
+    "registered_under": "MCI",
+    "study": "BPT",
+    "university": "Banaras Hindu University, Varanasi",
+    "issued_on": "22/04/2019",
+    "valid_till": "20/04/2024"
+  },
+  {
+    "name": "Anay Bandi",
+    "license_number": "2013/04/8122",
+    "registered_under": "NMC",
+    "study": "MBBS",
+    "university": "Banaras Hindu University, Varanasi",
+    "issued_on": "23/11/2020",
+    "valid_till": "22/11/2025"
+  },
+  {
+    "name": "Elakshi Mangat",
+    "license_number": "2020/01/9611",
+    "registered_under": "Kerala Medical Council",
+    "study": "MBBS",
+    "university": "All India Institute of Medical Sciences, New Delhi",
+    "issued_on": "03/08/2021",
+    "valid_till": "02/08/2026"
+  },
+  {
+    "name": "Oorja Tak",
+    "license_number": "2003/08/6959",
+    "registered_under": "NMC",
+    "study": "MBBS",
+    "university": "Maharashtra University of Health Sciences, Nashik",
+    "issued_on": "23/03/2017",
+    "valid_till": "22/03/2022"
+  },
+  {
+    "name": "Stuvan Lal",
+    "license_number": "2017/10/6083",
+    "registered_under": "West Bengal Medical Council",
+    "study": "MS",
+    "university": "Maharashtra University of Health Sciences, Nashik",
+    "issued_on": "04/12/2023",
+    "valid_till": "02/12/2028"
+  },
+  {
+    "name": "Hansh Grover",
+    "license_number": "2016/10/9544",
+    "registered_under": "MCI",
+    "study": "BHMS",
+    "university": "Maharashtra University of Health Sciences, Nashik",
+    "issued_on": "16/01/2019",
+    "valid_till": "15/01/2024"
+  },
+  {
+    "name": "Dishani Goyal",
+    "license_number": "2009/01/7645",
+    "registered_under": "Maharashtra Medical Council",
+    "study": "MD",
+    "university": "Rajiv Gandhi University of Health Sciences, Karnataka",
+    "issued_on": "01/03/2021",
+    "valid_till": "28/02/2026"
+  },
+  {
+    "name": "Divit Dada",
+    "license_number": "2013/10/7818",
+    "registered_under": "West Bengal Medical Council",
+    "study": "BUMS",
+    "university": "The West Bengal University of Health Sciences",
+    "issued_on": "26/08/2016",
+    "valid_till": "25/08/2021"
+  },
+  {
+    "name": "Taran Seth",
+    "license_number": "2015/05/7966",
+    "registered_under": "Tamil Nadu Medical Council",
+    "study": "MCh",
+    "university": "Rajiv Gandhi University of Health Sciences, Karnataka",
+    "issued_on": "11/11/2017",
+    "valid_till": "10/11/2022"
+  },
+  {
+    "name": "Jayan Kara",
+    "license_number": "2023/11/9799",
+    "registered_under": "MCI",
+    "study": "BAMS",
+    "university": "Christian Medical College, Vellore",
+    "issued_on": "18/05/2020",
+    "valid_till": "17/05/2025"
+  },
+  {
+    "name": "Indranil Manda",
+    "license_number": "2019/05/9064",
+    "registered_under": "Delhi Medical Council",
+    "study": "BUMS",
+    "university": "Armed Forces Medical College, Pune",
+    "issued_on": "25/01/2017",
+    "valid_till": "24/01/2022"
+  },
+  {
+    "name": "Aradhya Krishnan",
+    "license_number": "2022/02/5863",
+    "registered_under": "Kerala Medical Council",
+    "study": "MS",
+    "university": "Banaras Hindu University, Varanasi",
+    "issued_on": "10/07/2017",
+    "valid_till": "09/07/2022"
+  },
+  {
+    "name": "Gokul Kari",
+    "license_number": "2014/07/1733",
+    "registered_under": "Delhi Medical Council",
+    "study": "BAMS",
+    "university": "The West Bengal University of Health Sciences",
+    "issued_on": "17/09/2022",
+    "valid_till": "16/09/2027"
+  },
+  {
+    "name": "Trisha Shere",
+    "license_number": "2004/12/5664",
+    "registered_under": "West Bengal Medical Council",
+    "study": "BPT",
+    "university": "Christian Medical College, Vellore",
+    "issued_on": "29/08/2016",
+    "valid_till": "28/08/2021"
+  },
+  {
+    "name": "Indrans Bath",
+    "license_number": "2002/05/2271",
+    "registered_under": "West Bengal Medical Council",
+    "study": "BAMS",
+    "university": "Armed Forces Medical College, Pune",
+    "issued_on": "01/01/2017",
+    "valid_till": "31/12/2021"
+  },
+  {
+    "name": "Mahika Ganguly",
+    "license_number": "1998/10/3291",
+    "registered_under": "Uttar Pradesh Medical Council",
+    "study": "BDS",
+    "university": "Kerala University of Health Sciences",
+    "issued_on": "10/08/2022",
+    "valid_till": "09/08/2027"
+  },
+  {
+    "name": "Armaan Chana",
+    "license_number": "2000/06/3825",
+    "registered_under": "Kerala Medical Council",
+    "study": "BDS",
+    "university": "Dr. NTR University of Health Sciences, Andhra Pradesh",
+    "issued_on": "06/02/2021",
+    "valid_till": "05/02/2026"
+  },
+  {
+    "name": "Advika Gera",
+    "license_number": "2012/10/3222",
+    "registered_under": "Kerala Medical Council",
+    "study": "BPT",
+    "university": "Maharashtra University of Health Sciences, Nashik",
+    "issued_on": "11/04/2017",
+    "valid_till": "10/04/2022"
+  },
+  {
+    "name": "Advik Sridhar",
+    "license_number": "1997/10/4963",
+    "registered_under": "Kerala Medical Council",
+    "study": "MCh",
+    "university": "All India Institute of Medical Sciences, New Delhi",
+    "issued_on": "05/04/2021",
+    "valid_till": "04/04/2026"
+  },
+  {
+    "name": "Manikya Sood",
+    "license_number": "1999/01/6221",
+    "registered_under": "Andhra Pradesh Medical Council",
+    "study": "BHMS",
+    "university": "All India Institute of Medical Sciences, New Delhi",
+    "issued_on": "13/02/2020",
+    "valid_till": "11/02/2025"
+  },
+  {
+    "name": "Pihu Agrawal",
+    "license_number": "2024/10/7521",
+    "registered_under": "Maharashtra Medical Council",
+    "study": "MBBS",
+    "university": "Kerala University of Health Sciences",
+    "issued_on": "24/01/2022",
+    "valid_till": "23/01/2027"
+  },
+  {
+    "name": "Zoya Sharaf",
+    "license_number": "1998/05/5634",
+    "registered_under": "MCI",
+    "study": "MBBS",
+    "university": "Kerala University of Health Sciences",
+    "issued_on": "23/09/2017",
+    "valid_till": "22/09/2022"
+  },
+  {
+    "name": "Hiran Rajan",
+    "license_number": "2021/02/6111",
+    "registered_under": "Uttar Pradesh Medical Council",
+    "study": "MBBS",
+    "university": "All India Institute of Medical Sciences, New Delhi",
+    "issued_on": "26/09/2024",
+    "valid_till": "25/09/2029"
+  },
+  {
+    "name": "Azad Raval",
+    "license_number": "2009/08/3554",
+    "registered_under": "West Bengal Medical Council",
+    "study": "MBBS",
+    "university": "The West Bengal University of Health Sciences",
+    "issued_on": "28/08/2019",
+    "valid_till": "26/08/2024"
+  },
+  {
+    "name": "Nirvaan Lala",
+    "license_number": "2001/03/5010",
+    "registered_under": "Karnataka Medical Council",
+    "study": "MCh",
+    "university": "Armed Forces Medical College, Pune",
+    "issued_on": "30/06/2021",
+    "valid_till": "29/06/2026"
+  },
+  {
+    "name": "Seher Choudhry",
+    "license_number": "1997/10/9315",
+    "registered_under": "Andhra Pradesh Medical Council",
+    "study": "MBBS",
+    "university": "All India Institute of Medical Sciences, New Delhi",
+    "issued_on": "01/12/2024",
+    "valid_till": "30/11/2029"
+  },
+  {
+    "name": "Dhanuk Srinivas",
+    "license_number": "2019/06/8556",
+    "registered_under": "Andhra Pradesh Medical Council",
+    "study": "MBBS",
+    "university": "Christian Medical College, Vellore",
+    "issued_on": "03/09/2022",
+    "valid_till": "02/09/2027"
+  },
+  {
+    "name": "Manjari Choudhury",
+    "license_number": "2003/10/4265",
+    "registered_under": "Karnataka Medical Council",
+    "study": "MD",
+    "university": "King George's Medical University, Lucknow",
+    "issued_on": "16/06/2023",
+    "valid_till": "14/06/2028"
+  },
+  {
+    "name": "Siya Kumer",
+    "license_number": "2013/05/9050",
+    "registered_under": "Kerala Medical Council",
+    "study": "BDS",
+    "university": "Kerala University of Health Sciences",
+    "issued_on": "30/08/2019",
+    "valid_till": "28/08/2024"
+  },
+  {
+    "name": "Gokul Sekhon",
+    "license_number": "2014/05/6212",
+    "registered_under": "Kerala Medical Council",
+    "study": "MBBS",
+    "university": "Maharashtra University of Health Sciences, Nashik",
+    "issued_on": "29/04/2020",
+    "valid_till": "28/04/2025"
+  },
+  {
+    "name": "Uthkarsh Srinivas",
+    "license_number": "2004/08/9977",
+    "registered_under": "West Bengal Medical Council",
+    "study": "DM",
+    "university": "Armed Forces Medical College, Pune",
+    "issued_on": "16/12/2018",
+    "valid_till": "15/12/2023"
+  },
+  {
+    "name": "Samiha Gill",
+    "license_number": "2013/09/9273",
+    "registered_under": "Andhra Pradesh Medical Council",
+    "study": "MCh",
+    "university": "All India Institute of Medical Sciences, New Delhi",
+    "issued_on": "18/01/2020",
+    "valid_till": "16/01/2025"
+  },
+  {
+    "name": "Arnav Bajaj",
+    "license_number": "2019/11/4828",
+    "registered_under": "Karnataka Medical Council",
+    "study": "BHMS",
+    "university": "King George's Medical University, Lucknow",
+    "issued_on": "27/06/2017",
+    "valid_till": "26/06/2022"
+  },
+  {
+    "name": "Faiyaz Kohli",
+    "license_number": "2008/08/3561",
+    "registered_under": "Tamil Nadu Medical Council",
+    "study": "BAMS",
+    "university": "Banaras Hindu University, Varanasi",
+    "issued_on": "25/07/2021",
+    "valid_till": "24/07/2026"
+  },
+  {
+    "name": "Kavya Vaidya",
+    "license_number": "2014/01/6612",
+    "registered_under": "Karnataka Medical Council",
+    "study": "MD",
+    "university": "All India Institute of Medical Sciences, New Delhi",
+    "issued_on": "02/12/2021",
+    "valid_till": "01/12/2026"
+  },
+  {
+    "name": "Biju Kala",
+    "license_number": "2005/08/4706",
+    "registered_under": "Uttar Pradesh Medical Council",
+    "study": "BDS",
+    "university": "All India Institute of Medical Sciences, New Delhi",
+    "issued_on": "16/02/2024",
+    "valid_till": "14/02/2029"
+  },
+  {
+    "name": "Manikya Rao",
+    "license_number": "2002/02/3637",
+    "registered_under": "Tamil Nadu Medical Council",
+    "study": "DM",
+    "university": "Kerala University of Health Sciences",
+    "issued_on": "25/04/2020",
+    "valid_till": "24/04/2025"
+  },
+  {
+    "name": "Darshit Date",
+    "license_number": "2024/04/9331",
+    "registered_under": "MCI",
+    "study": "MBBS",
+    "university": "All India Institute of Medical Sciences, New Delhi",
+    "issued_on": "20/09/2021",
+    "valid_till": "19/09/2026"
+  },
+  {
+    "name": "Urvi Madan",
+    "license_number": "2016/10/5880",
+    "registered_under": "Tamil Nadu Medical Council",
+    "study": "MBBS",
+    "university": "All India Institute of Medical Sciences, New Delhi",
+    "issued_on": "09/12/2017",
+    "valid_till": "08/12/2022"
+  },
+  {
+    "name": "Aradhya Kara",
+    "license_number": "2012/05/9631",
+    "registered_under": "Andhra Pradesh Medical Council",
+    "study": "MBBS",
+    "university": "All India Institute of Medical Sciences, New Delhi",
+    "issued_on": "20/03/2025",
+    "valid_till": "19/03/2030"
+  },
+  {
+    "name": "Ahana  Sathe",
+    "license_number": "2017/06/5529",
+    "registered_under": "West Bengal Medical Council",
+    "study": "BUMS",
+    "university": "All India Institute of Medical Sciences, New Delhi",
+    "issued_on": "05/10/2018",
+    "valid_till": "04/10/2023"
+  },
+  {
+    "name": "Renee Karan",
+    "license_number": "2015/01/8327",
+    "registered_under": "Kerala Medical Council",
+    "study": "MS",
+    "university": "Rajiv Gandhi University of Health Sciences, Karnataka",
+    "issued_on": "19/05/2017",
+    "valid_till": "18/05/2022"
+  },
+  {
+    "name": "Vritika Hegde",
+    "license_number": "2013/07/6120",
+    "registered_under": "Delhi Medical Council",
+    "study": "MCh",
+    "university": "Maharashtra University of Health Sciences, Nashik",
+    "issued_on": "21/10/2018",
+    "valid_till": "20/10/2023"
+  },
+  {
+    "name": "Zain Sood",
+    "license_number": "2008/08/5309",
+    "registered_under": "MCI",
+    "study": "BUMS",
+    "university": "All India Institute of Medical Sciences, New Delhi",
+    "issued_on": "27/02/2019",
+    "valid_till": "26/02/2024"
+  },
+  {
+    "name": "Tiya Kale",
+    "license_number": "1999/09/8429",
+    "registered_under": "West Bengal Medical Council",
+    "study": "BDS",
+    "university": "Kerala University of Health Sciences",
+    "issued_on": "10/01/2025",
+    "valid_till": "09/01/2030"
+  },
+  {
+    "name": "Mehul Chana",
+    "license_number": "2023/12/2759",
+    "registered_under": "Karnataka Medical Council",
+    "study": "MS",
+    "university": "Dr. NTR University of Health Sciences, Andhra Pradesh",
+    "issued_on": "09/12/2021",
+    "valid_till": "08/12/2026"
+  }
+]
