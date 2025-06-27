@@ -2,8 +2,12 @@ from astrapy import DataAPIClient
 import os
 from pathlib import Path
 import json
+from beanie import PydanticObjectId
+
 from backend.config import main as config
 from backend.utils.embeddings import get_text_embedding
+from backend.utils.generate_random_string import generate_random_string
+from backend.models.ReportHistory import ReportHistory
 
 from backend.controller.agents.classifier_agent import classify_file
 from backend.controller.agents.credential_agent import extract_credentials_from_file
@@ -69,16 +73,40 @@ async def create_vector_store() -> None:
             collection.update_one({"id": doc_id}, {"$set": astra_doc}, upsert=True)
 
 
-async def run_agent(file_paths: dict[str, str]) -> dict:
+async def run_agent(file_paths: dict[str, str], curr_user) -> dict:
 
     # await create_vector_store() # Commenting out to avoid re-creating the vector store every time because its stored on astra db
 
-    classifier_result = (await classify_file(file_paths["credential_path"]))['document_type']
-    credential_result = (await extract_credentials_from_file(file_paths["credential_path"]))['extracted']
-    verifier_result = (await verify_extracted_credential(json.dumps(credential_result)))['status']
-    crosscheck_result = await cross_check_all(credential_result, verifier_result, file_paths["resume_path"])
+    classifier_result = (await classify_file(file_paths["credential_path"]))[
+        "document_type"
+    ]
+    credential_result = (
+        await extract_credentials_from_file(file_paths["credential_path"])
+    )["extracted"]
+    verifier_result = (
+        await verify_extracted_credential(json.dumps(credential_result))
+    )["status"]
+    crosscheck_result = await cross_check_all(
+        credential_result, verifier_result, file_paths["resume_path"]
+    )
     credebility_result = await evaluate_credibility(crosscheck_result, verifier_result)
     
+    historical_entry = ReportHistory(
+        user_id=curr_user.user_id,
+        report_id=generate_random_string(7),
+        credential_type=classifier_result,
+        credential_path=file_paths["credential_path"],
+        validator_type="resume",
+        validator_path=file_paths["resume_path"],
+        result={
+            "classifier_result": classifier_result,
+            "credebility_result": credebility_result,
+        },
+        status="completed",
+    )
+    
+    await historical_entry.save()
+
     return {
         "classifier_result": classifier_result,
         "credebility_result": credebility_result,

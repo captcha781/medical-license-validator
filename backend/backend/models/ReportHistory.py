@@ -15,7 +15,13 @@ class ReportHistory(Document):
     validator_type: str
     validator_path: str
     
+    result: dict
+    
     created_at: datetime = Field(default_factory=datetime.utcnow)
     updated_at: datetime = Field(default_factory=datetime.utcnow)
     status: enums.ReportStatus = Field(default=enums.ReportStatus.PENDING)
+    
+    class Settings:
+        name = "report_history"
+
     

@@ -6,6 +6,7 @@ import { Navigate } from "react-router-dom";
 const Signup = Loadable(lazy(() => import("../pages/Signup")));
 const Signin = Loadable(lazy(() => import("../pages/Signin")));
 const Dashboard = Loadable(lazy(() => import("../pages/Dashboard")));
+const ReportView = Loadable(lazy(() => import("../pages/ReportView")));
 
 const MainRoutes = [
   {
@@ -36,6 +37,22 @@ const MainRoutes = [
       </RouteCondition>
     ),
   },
+  {
+    path: "/report/:report_id",
+    element: (
+      <RouteCondition type="private">
+        <ReportView />
+      </RouteCondition>
+    ),
+  },
+  {
+    path: "*",
+    element: (
+      <div className="flex items-center justify-center h-screen">
+        <h1 className="text-3xl font-bold">404 - Page Not Found</h1>
+      </div>
+    )
+  }
 ];
 
 export default MainRoutes;

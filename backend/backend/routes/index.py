@@ -24,4 +24,12 @@ async def run_agent(
     resume: UploadFile = File(...),
     curr_user = Depends(get_current_user)
 ):
-    return await main.run_agent(credential, resume)
+    return await main.run_agent(credential, resume, curr_user)
+
+@router.get("/report-history-list")
+async def report_history_list(curr_user = Depends(get_current_user)):
+    return await main.report_history_list(curr_user)
+
+@router.get("/report/{report_id}")
+async def report(report_id: str, curr_user = Depends(get_current_user)):
+    return await main.report(report_id, curr_user)

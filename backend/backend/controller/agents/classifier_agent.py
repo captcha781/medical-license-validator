@@ -12,7 +12,7 @@ from backend.config import main as config
 
 # Document type categories
 Categories = Literal[
-    "medical_license", "medical_degree", "training_certificate", "board_certificate"
+    "medical_license", "medical_degree", "training_certificate", "board_certificate", "not_a_valid_credential"
 ]
 
 
@@ -22,14 +22,6 @@ class ClassifierState(TypedDict):
     document_type: Categories
     file_content: str
     context: str
-
-
-# Step 1: Embed file content and retrieve similar documents from Astra DB
-def detect_encoding(file_path: str) -> str:
-    with open(file_path, "rb") as f:
-        raw_data = f.read(10000)  # sample only first 10KB
-        result = chardet.detect(raw_data)
-        return result["encoding"] or "utf-8"
 
 
 def embed_and_search(state: ClassifierState) -> dict:
@@ -47,16 +39,18 @@ def embed_and_search(state: ClassifierState) -> dict:
         config.ASTRA_DB_ENDPOINT, keyspace=config.ASTRA_DB_KEYSPACE
     )
     collection = db.get_collection("embeddings")
-    
-    results = collection.find({},sort={"$vector": embedding}, limit=5)
+
+    results = collection.find({}, sort={"$vector": embedding}, limit=5)
     similar_context = "\n---\n".join(r["text"] for r in results if "text" in r)
-    
+
     new_state = dict(state)
-    new_state.update({
-        "file_content": content,
-        "context": similar_context,
-    })
-    
+    new_state.update(
+        {
+            "file_content": content,
+            "context": similar_context,
+        }
+    )
+
     return new_state
 
 
@@ -66,13 +60,18 @@ def classify_document(state: dict) -> ClassifierState:
     content = state["file_content"]
     context = state["context"]
 
-    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash-latest", google_api_key=config.GEMINI_API_KEY)
+    llm = ChatGoogleGenerativeAI(
+        model="gemini-1.5-flash-latest", google_api_key=config.GEMINI_API_KEY
+    )
 
     prompt = f"""Classify the type of this medical document into one of the following:
 - medical_license
 - medical_degree
 - training_certificate
 - board_certificate
+
+If its not a valid medical document or else it doesn't match with those 4 classification types then mark it as
+- not_a_valid_credential
 
 Document:
 \"\"\"

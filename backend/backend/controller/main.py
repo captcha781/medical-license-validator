@@ -1,6 +1,3 @@
-import logging
-import json
-import re
 import os
 import shutil
 
@@ -12,10 +9,12 @@ from beanie import PydanticObjectId
 from uuid import uuid4 as uuid
 from uuid import UUID
 import bcrypt
+from pydantic import BaseModel, Field
 from fastapi.encoders import jsonable_encoder
 
 from backend.models.User import User
 from backend.models.Token import Token
+from backend.models.ReportHistory import ReportHistory
 
 from backend.security.jsonwebtoken import generate_jwt_token
 from backend.config import main as config
@@ -124,11 +123,11 @@ async def file_handler(credential, resume):
     return {"credential_path": credential_path, "resume_path": resume_path}
 
 
-async def run_agent(credential, resume):
+async def run_agent(credential, resume, curr_user):
 
     files_locations = await file_handler(credential, resume)
 
-    result = await agent_run(files_locations)
+    result = await agent_run(files_locations, curr_user)
 
     print("Agent Result:", result)
 
@@ -138,6 +137,53 @@ async def run_agent(credential, resume):
             "message": "Agent ran successfully",
             "navigate": "/",
             "result": jsonable_encoder(result),
+        },
+        status_code=200,
+    )
+
+
+async def report_history_list(curr_user):
+
+    class ProjectionModel(BaseModel):
+        user_id: PydanticObjectId
+        report_id: str
+        created_at: datetime
+        status: str
+        id: PydanticObjectId = Field(alias="_id")
+        
+        class Config:
+            allow_population_by_field_name = True
+
+
+    reports = await ReportHistory.find(
+        {"user_id": curr_user.user_id}, projection_model=ProjectionModel, sort=[('_id', -1)]
+    ).to_list()
+
+    reports = jsonable_encoder(reports)
+
+    return JSONResponse(
+        {
+            "success": True,
+            "message": "Report history list",
+            "navigate": "/",
+            "result": reports,
+        },
+        status_code=200,
+    )
+
+async def report(report_id: str, curr_user):
+    report = await ReportHistory.find_one({"report_id": report_id, "user_id": curr_user.user_id})
+
+    if not report:
+        return JSONResponse(
+            {"success": False, "message": "Report not found"}, status_code=400
+        )
+
+    return JSONResponse(
+        {
+            "success": True,
+            "navigate": "/",
+            "result": jsonable_encoder(report),
         },
         status_code=200,
     )

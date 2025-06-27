@@ -1,3 +1,4 @@
+import json
 from typing import TypedDict, Optional
 from langgraph.graph import StateGraph
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -77,7 +78,7 @@ Document:
     response = llm.invoke(prompt)
 
     try:
-        extracted = eval(response.content.strip())
+        extracted = json.loads(response.content.strip()) if isinstance(response.content, str) else response.content
     except Exception as e:
         raise ValueError(f"Invalid JSON from LLM: {response.content}") from e
 
