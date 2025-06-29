@@ -122,7 +122,7 @@ def build_classifier_agent():
 
 
 # For testing or running directly
-async def classify_file(file_path: str) -> dict:
+async def classify_file(prev_state: dict) -> dict:
     graph = build_classifier_agent()
-    result = await graph.ainvoke({"file_path": file_path})
-    return result
+    result = await graph.ainvoke({"file_path": prev_state["file_paths"]["credential_path"]})
+    return {"classifier_result": result}

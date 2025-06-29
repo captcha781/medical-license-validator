@@ -82,12 +82,14 @@ def build_cross_check_agent():
     return graph.compile()
 
 
-async def cross_check_all(extracted: str, verification: dict, resume_path: str) -> dict:
+async def cross_check_all(prev_state: dict) -> dict:
     graph = build_cross_check_agent()
-    return await graph.ainvoke(
+    result = await graph.ainvoke(
         {
-            "extracted": extracted,
-            "verification": verification,
-            "resume_path": resume_path,
+            "extracted": prev_state['credential_result']['extracted'],
+            "verification": prev_state['verifier_result']['status'],
+            "resume_path": prev_state["file_paths"]["resume_path"],
         }
     )
+    
+    return {"crosscheck_result": result}

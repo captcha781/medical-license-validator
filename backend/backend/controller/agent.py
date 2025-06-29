@@ -3,17 +3,19 @@ import os
 from pathlib import Path
 import json
 from beanie import PydanticObjectId
+from langgraph.graph import StateGraph
+from typing import TypedDict
 
 from backend.config import main as config
 from backend.utils.embeddings import get_text_embedding
 from backend.utils.generate_random_string import generate_random_string
 from backend.models.ReportHistory import ReportHistory
 
-from backend.controller.agents.classifier_agent import classify_file
-from backend.controller.agents.credential_agent import extract_credentials_from_file
-from backend.controller.agents.verification_agent import verify_extracted_credential
-from backend.controller.agents.crosscheck_agent import cross_check_all
-from backend.controller.agents.credibility_agent import evaluate_credibility
+from backend.controller.agents.classifier_agent import classify_file as classifier_agent
+from backend.controller.agents.credential_agent import extract_credentials_from_file as extractor_agent
+from backend.controller.agents.verification_agent import verify_extracted_credential as verifier_agent
+from backend.controller.agents.crosscheck_agent import cross_check_all as crosscheck_agent
+from backend.controller.agents.credibility_agent import evaluate_credibility as credibility_agent
 
 file_paths = [
     os.path.join(
@@ -76,38 +78,64 @@ async def create_vector_store() -> None:
 async def run_agent(file_paths: dict[str, str], curr_user) -> dict:
 
     # await create_vector_store() # Commenting out to avoid re-creating the vector store every time because its stored on astra db
-
-    classifier_result = (await classify_file(file_paths["credential_path"]))[
-        "document_type"
-    ]
-    credential_result = (
-        await extract_credentials_from_file(file_paths["credential_path"])
-    )["extracted"]
-    verifier_result = (
-        await verify_extracted_credential(json.dumps(credential_result))
-    )["status"]
-    crosscheck_result = await cross_check_all(
-        credential_result, verifier_result, file_paths["resume_path"]
-    )
-    credebility_result = await evaluate_credibility(crosscheck_result, verifier_result)
     
+    state_result = await orchestrator(file_paths=file_paths)
+    result = state_result['formatted_response']
+
     historical_entry = ReportHistory(
         user_id=curr_user.user_id,
         report_id=generate_random_string(7),
-        credential_type=classifier_result,
+        credential_type=result['classifier_result'],
         credential_path=file_paths["credential_path"],
         validator_type="resume",
         validator_path=file_paths["resume_path"],
-        result={
-            "classifier_result": classifier_result,
-            "credebility_result": credebility_result,
-        },
+        result=result,
         status="completed",
     )
     
     await historical_entry.save()
 
+    return result
+
+class OrchestratorState(TypedDict):
+    file_paths: dict[str, str]
+    classifier_result: dict
+    credential_result: dict
+    verifier_result: dict
+    crosscheck_result: dict
+    credebility_result: dict
+    formatted_response: dict
+
+
+def response_formatter(state: OrchestratorState) -> dict:
     return {
-        "classifier_result": classifier_result,
-        "credebility_result": credebility_result,
+        "formatted_response": {
+            "classifier_result": state["classifier_result"]["document_type"],
+            "credebility_result": state["credebility_result"],
+        }
     }
+
+
+def orchestrator_agent():
+    graph = StateGraph(OrchestratorState)
+    graph.add_node("CLASSIFIER", classifier_agent)
+    graph.add_node("EXTRACTOR", extractor_agent)
+    graph.add_node("VERIFIER", verifier_agent)
+    graph.add_node("CROSSCHECK", crosscheck_agent)
+    graph.add_node("EVALUATOR", credibility_agent)
+    graph.add_node("FORMATTER", response_formatter)
+    
+    graph.set_entry_point("CLASSIFIER")
+    graph.add_edge("CLASSIFIER", "EXTRACTOR")
+    graph.add_edge("EXTRACTOR", "VERIFIER")
+    graph.add_edge("VERIFIER", "CROSSCHECK")
+    graph.add_edge("CROSSCHECK", "EVALUATOR")
+    graph.add_edge("EVALUATOR", "FORMATTER")
+    
+    graph.set_finish_point("FORMATTER")
+    
+    return graph.compile()
+
+async def orchestrator(file_paths: dict[str, str]) -> dict:
+    graph = orchestrator_agent()
+    return await graph.ainvoke({ "file_paths": file_paths })

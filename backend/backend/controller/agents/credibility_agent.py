@@ -65,9 +65,11 @@ def build_credibility_score_agent():
     return graph.compile()
 
 
-async def evaluate_credibility(crosscheck: dict, verification: dict) -> dict:
+async def evaluate_credibility(prev_state: dict) -> dict:
     graph = build_credibility_score_agent()
-    return await graph.ainvoke({
-        "crosscheck": crosscheck,
-        "verification": verification
+    result = await graph.ainvoke({
+        "crosscheck": prev_state['crosscheck_result'],
+        "verification": prev_state['verifier_result']['status']
     })
+    
+    return {"credebility_result": result}

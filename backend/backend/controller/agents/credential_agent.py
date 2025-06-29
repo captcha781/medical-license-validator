@@ -110,6 +110,7 @@ def build_credential_extraction_agent():
 
 
 # Async callable
-async def extract_credentials_from_file(file_path: str) -> dict:
+async def extract_credentials_from_file(prev_state: dict) -> dict:
     graph = build_credential_extraction_agent()
-    return await graph.ainvoke({"file_path": file_path})
+    result = await graph.ainvoke({"file_path": prev_state["file_paths"]["credential_path"]})
+    return {"credential_result": result}

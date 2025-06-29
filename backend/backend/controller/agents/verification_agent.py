@@ -7,7 +7,7 @@ import json
 
 
 def embed_and_retrieve_credential(state: dict) -> dict:
-    credential_text = state["extracted"]
+    credential_text = json.dumps(state["extracted"])
 
     embedding = get_text_embedding(credential_text)
 
@@ -92,6 +92,8 @@ def build_credential_verification_agent():
     return graph.compile()
 
 
-async def verify_extracted_credential(extracted: dict) -> dict:
+async def verify_extracted_credential(prev_state: dict) -> dict:
+    
     graph = build_credential_verification_agent()
-    return await graph.ainvoke({"extracted": extracted})
+    result = await graph.ainvoke({"extracted": prev_state['credential_result']['extracted']})
+    return {"verifier_result": result}
