@@ -151,7 +151,7 @@ const UploadDocuments = () => {
                       {report.report_id}
                     </p>
                     <p className="text-xs text-gray-500">
-                      {moment(new Date(report.created_at)).fromNow()}
+                      {moment(report.created_at).fromNow()}
                     </p>
                   </div>
                   <span
