@@ -93,6 +93,7 @@ Respond with only the type name from the list."""
         "medical_degree",
         "training_certificate",
         "board_certificate",
+        "not_a_valid_credential"
     }
 
     if label not in valid_labels:
