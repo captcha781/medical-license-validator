@@ -24,7 +24,7 @@ const ViewReport = () => {
         }
       );
       if (response.data.success) {
-        setReport(response.data.result.result);
+        setReport({...response.data.result.result, created_at: response.data.result.created_at});
       } else {
         setError("Failed to fetch report.");
       }
@@ -52,6 +52,8 @@ const ViewReport = () => {
     localStorage.removeItem("access_token");
     dispatch(revokeAuth({}));
   };
+
+    console.log(report)
 
   return (
     <div className="flex min-h-screen bg-gray-100">
