@@ -125,7 +125,7 @@ def response_formatter(state: OrchestratorState) -> dict:
                 (
                     {
                         "credibility_score": 0,
-                        "summary": "The uploaded credential is not a valid credential",
+                        "summary": "The uploaded credential is not a valid licence / degree / certification",
                         "flag": "red",
                         "discrepancies": [],
                     }

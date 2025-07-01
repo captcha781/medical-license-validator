@@ -23,21 +23,7 @@ class ExtractionState(TypedDict):
     extracted: CredentialFields
 
 
-# Step 1: Read file content
-def read_document(state: ExtractionState) -> ExtractionState:
-    file_path = state["file_path"]
-
-    try:
-        content = read_file_safely(file_path)
-    except Exception as e:
-        raise ValueError(f"Failed to read file: {file_path}. Reason: {e}")
-
-    new_state = dict(state)
-    new_state["file_content"] = content
-    return new_state
-
-
-# Step 2: Extract credentials with Gemini
+# Step 1: Extract credentials with Gemini from previously read document
 def extract_credentials(state: ExtractionState) -> ExtractionState:
     content = state["file_content"]
 
@@ -78,7 +64,11 @@ Document:
     response = llm.invoke(prompt)
 
     try:
-        extracted = json.loads(response.content.strip()) if isinstance(response.content, str) else response.content
+        extracted = (
+            json.loads(response.content.strip())
+            if isinstance(response.content, str)
+            else response.content
+        )
     except Exception as e:
         raise ValueError(f"Invalid JSON from LLM: {response.content}") from e
 
@@ -97,12 +87,10 @@ def format_output(state: ExtractionState) -> dict:
 # Build the LangGraph
 def build_credential_extraction_agent():
     graph = StateGraph(ExtractionState)
-    graph.add_node("ReadFile", read_document)
     graph.add_node("Extract", extract_credentials)
     graph.add_node("Format", format_output)
 
-    graph.set_entry_point("ReadFile")
-    graph.add_edge("ReadFile", "Extract")
+    graph.set_entry_point("Extract")
     graph.add_edge("Extract", "Format")
     graph.set_finish_point("Format")
 
@@ -112,5 +100,10 @@ def build_credential_extraction_agent():
 # Async callable
 async def extract_credentials_from_file(prev_state: dict) -> dict:
     graph = build_credential_extraction_agent()
-    result = await graph.ainvoke({"file_path": prev_state["file_paths"]["credential_path"]})
+    result = await graph.ainvoke(
+        {
+            "file_path": prev_state["file_paths"]["credential_path"],
+            "file_content": prev_state["classifier_result"]["file_content"],
+        }
+    )
     return {"credential_result": result}

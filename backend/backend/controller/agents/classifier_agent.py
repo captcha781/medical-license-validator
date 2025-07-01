@@ -104,7 +104,7 @@ Respond with only the type name from the list."""
 
 # Step 3: Format result for output
 def format_output(state: ClassifierState) -> dict:
-    return {"type": state["document_type"]}
+    return {"type": state["document_type"], "file_content": state['file_content']}
 
 
 # Build the LangGraph classifier agent
