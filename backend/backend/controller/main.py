@@ -23,6 +23,11 @@ from backend.controller.agent import run_agent as agent_run
 
 
 async def signup(signup_data):
+    if signup_data.password != signup_data.confirm_password:
+        return JSONResponse(
+            {"success": False, "message": "Passwords do not match"}, status_code=400
+        )
+    
     is_user_already_exists = await User.find_one({"email": signup_data.email})
 
     if is_user_already_exists:
