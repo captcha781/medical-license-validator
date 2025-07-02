@@ -124,7 +124,7 @@ const UploadDocuments = () => {
     localStorage.removeItem("access_token");
     dispatch(revokeAuth({}));
   };
-
+console.log(reports)
   return (
     <div className="flex min-h-screen bg-gray-100">
       {/* Sidebar */}
@@ -149,7 +149,7 @@ const UploadDocuments = () => {
                       {report.report_id}
                     </p>
                     <p className="text-xs text-gray-500">
-                      {moment(report.created_at).fromNow()}
+                      {moment.utc(report.created_at).local().fromNow()}
                     </p>
                   </div>
                   <span
