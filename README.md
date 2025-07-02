@@ -7,7 +7,7 @@ This platform uses a series of AI agents to extract, verify, cross-check, and as
 
 ## 🚀 Features
 
-- 🔍 **Document Classification Agent**
+- 🔍 **Document Classification Agent** *(RAG based)*
   - Classifies input documents into: `medical_license`, `medical_degree`, `training_certificate`, `board_certificate`
 
 - 🧾 **Credential Extraction Agent**
@@ -22,7 +22,7 @@ This platform uses a series of AI agents to extract, verify, cross-check, and as
   - Uses Gemini to detect inconsistencies with fuzzy logic
 
 - 📊 **Credibility Score Agent**
-  - Computes credibility score (0–10) based on verification and crosscheck results
+  - Computes credibility score (0–100) based on verification and crosscheck results
   - Outputs a human-readable summary
 
 - 👤 **User Authentication**
@@ -92,7 +92,7 @@ npm run dev
 ---
 
 ## 🔐 Environment Variables
-Create a `local.env` file in `backend/config/`:
+Create a `local.env` file in `backend/`:
 ```env
 CORS_ORIGIN = "http://localhost:5173"
 MONGO_URI = "mongodb://localhost:27017/agentic-ai-hackathon"
@@ -145,7 +145,7 @@ GEMINI_API_KEY = ""
 ---
 
 ## 👥 Contributors
-- Bhuvanesh (Lead Developer)
+- Bhuvanesh (Developer)
 
 ---
 
