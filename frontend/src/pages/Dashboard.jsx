@@ -124,7 +124,7 @@ const UploadDocuments = () => {
     localStorage.removeItem("access_token");
     dispatch(revokeAuth({}));
   };
-console.log(reports)
+
   return (
     <div className="flex min-h-screen bg-gray-100">
       {/* Sidebar */}
