@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import config from "../config";
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -22,11 +23,13 @@ const Signup = () => {
       return;
     }
 
-    const response = await axios.post('http://localhost:5000/api/signup', formData)
+    const response = await axios.post("/signup", formData, {
+      baseURL: config.API_URL,
+    });
 
     if (response.data.success) {
-      alert('Signup successful')
-      navigate('/signin');
+      alert("Signup successful");
+      navigate("/signin");
     }
   };
 

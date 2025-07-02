@@ -4,6 +4,7 @@ import { revokeAuth } from "../redux/slices/auth.slice";
 import { useDispatch } from "react-redux";
 import moment from "moment";
 import { Link } from "react-router-dom";
+import config from "../config";
 
 const UploadDocuments = () => {
   const [resume, setResume] = useState(null);
@@ -48,10 +49,10 @@ const UploadDocuments = () => {
   const retrieveReportHistory = async () => {
     try {
       const token = localStorage.getItem("accessToken");
-      const response = await axios.get(
-        "http://localhost:5000/api/report-history-list",
-        { headers: { Authorization: `Bearer ${token}` } }
-      );
+      const response = await axios.get("/report-history-list", {
+        baseURL: config.API_URL,
+        headers: { Authorization: `Bearer ${token}` },
+      });
 
       if (response.data.success) {
         setReports(response.data.result);
@@ -84,16 +85,13 @@ const UploadDocuments = () => {
     try {
       setIsLoading(true);
       const token = localStorage.getItem("accessToken");
-      const response = await axios.post(
-        "http://localhost:5000/api/run-agent",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const response = await axios.post("/run-agent", formData, {
+        baseURL: config.API_URL,
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${token}`,
+        },
+      });
       setMessage("Upload successful!");
       setIsLoading(false);
       if (response.data.success) {

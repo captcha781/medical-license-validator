@@ -4,6 +4,7 @@ import axios from "axios";
 import moment from "moment";
 import { useDispatch } from "react-redux";
 import { revokeAuth } from "../redux/slices/auth.slice";
+import config from "../config";
 
 const ViewReport = () => {
   const { report_id } = useParams();
@@ -16,8 +17,9 @@ const ViewReport = () => {
     try {
       const token = localStorage.getItem("accessToken");
       const response = await axios.get(
-        `http://localhost:5000/api/report/${report_id}`,
+        `/report/${report_id}`,
         {
+          baseURL: config.API_URL,
           headers: {
             Authorization: `Bearer ${token}`,
           },

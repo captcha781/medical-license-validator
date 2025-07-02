@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { setupAuthentication } from "../redux/slices/auth.slice";
+import config from "../config";
 
 const Signin = () => {
   const navigate = useNavigate();
@@ -19,10 +20,9 @@ const Signin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await axios.post(
-      "http://localhost:5000/api/signin",
-      formData
-    );
+    const response = await axios.post("/signin", formData, {
+      baseURL: config.API_URL,
+    });
 
     if (response.data.success) {
       alert("Signuin successful");
